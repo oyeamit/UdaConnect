@@ -1,0 +1,14 @@
+microservice architecture:
+
+Basically three message passing strategies would integrate well here -
+
+1. RESTful API: REST API provides high throughput in performance , relatively easy to implement
+and does not include complexity in the project. The frontend will use RESTful API to integrate 
+with different HTTP routes like /persons, etc
+
+2. gRPC: Since, A lot of user will be sending location data concurrently, and gRPC capability of 
+reduced payload size and connection overhead; therefore considering large volume of location data,
+gRPC message passing technique was adopted between mobile client and location-ingester-service.
+
+3. Kafka: Since, the requirement is to handle the large volume of location data, Kafka can be used
+for its durable distributed message queue capability. It will also enable decoupling of our system.
