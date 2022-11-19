@@ -1,7 +1,6 @@
 from datetime import datetime
 
-from app.udaconnect.models import Connection
-from app.udaconnect.schemas import ConnectionSchema,
+from app.udaconnect.schemas import ConnectionSchema
 from app.udaconnect.services import ConnectionService
 from flask import request
 from flask_accepts import accepts, responds
